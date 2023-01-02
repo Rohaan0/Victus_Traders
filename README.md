@@ -1,70 +1,57 @@
-# Getting Started with Create React App
+## MVP
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Description:
+This website will be a storefront that will sell trading cards
 
-## Available Scripts
+#  FrontEnd:
 
-In the project directory, you can run:
 
-### `npm start`
+- It will have a main page showing off featured cards that you can click to send to a description page where you can then add it to your cart
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- The nav bar will show different kinds of cards organized in different ways
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Uses a search bar that finds specific cards
 
-### `npm test`
+# BackEnd:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- The Backend will use a Sequelize database
+- Will use trading card API’s
+- Can add reviews into for the products
+- Can delete accounts and info
+- Can create new Cards and custom cards
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# DataBase:
+- Uses Sql
+- User Info, Location, Products, Cart, Reviews will be tables
+- Username and Product and location will be connected by the cart
+- Username Product will be connected by the Reviews
+- Username and Location will be connected
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# Main Features and Future Features:
+# - FrontPage
+    a. Clicking a product will send you to a description page
+    b. Can write a review for a product
+- The Search Bar
+- Create a Custom Card and add it to the database
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+# - Cart Page
+    a. You can Submit items which will send you to a card info page
+    b. It will save your info with an encryption
+- same nav bar as front page 
+- you will need to log in to save items in cart
+- You can delete items added to your cart
+- You can add an Item to a cart if you are logged in
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+# - Custom Card builder
+    a. You can create a custom card you insert a premade image and write a description and powers for it inside of a form
+    b. It will be added to the card database and be put as an item and will become searchable
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+# - FAQ
+- you will be able to contact us and read about the websites creation and report bugs
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# - Resources
+- Find resources of our api's and manufacturers
