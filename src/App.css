@@ -1,38 +1,99 @@
-.App {
-  text-align: center;
+
+
+:root {
+  --primary-color: #656565;
+  --primray-color-dark: grey;
+  --secondary-color: #823738;
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+* {
+  margin: 0px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #656565;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+
+a {
+  text-decoration: none;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+.main-page {
+  margin-top: 80px;
+  width: 100vw;
+  /* height: calc(100vh - 60px); */
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.card-container {
+  width: 100vw;
+  gap: 50px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.search-hide {
+  top: -350px;
+  transition: all 0.3s ease-in-out;
+  display: hidden;
+}
+
+.search-show {
+top: 50;
+transition: all 0.3s ease-in-out;
+}
+
+
+.nav-btn {
+  font-size: 24px;
+  background-color: transparent;
+  color: white;
+  border: none; 
+}
+
+.menu-show {
+  right: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.menu-hide {
+  right: -350px;
+  transition: all 0.3s ease-in-out;
+}
+
+.search-container {
+  margin-bottom: -100px;
+}
+
+.product-image {
+  width: 15%;
+  object-fit: cover;
+}
+
+
+.product-page {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  margin: 20px;
+  text-align: center;
+  padding: 20px 200px 0px 200px;
 }

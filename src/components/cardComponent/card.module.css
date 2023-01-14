@@ -1,0 +1,41 @@
+.card {
+        width: 400px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        color: white;
+}
+
+.card img {
+    width: 50%;
+    aspect-ratio: 1/1.5;
+    object-fit: ;
+}
+
+
+
+.card_btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 50px 10% 50px 10%;
+    height: 1.6rem;
+    margin: 5px;
+    font-size: large;
+    font-weight: 500;
+    padding: 15px;
+}
+
+.card_price {
+    font-size: 30px;
+    border: none;
+    padding: 0px 50px 0px 50px;
+}
+
+.card_btn:hover {
+    cursor: pointer;
+}
