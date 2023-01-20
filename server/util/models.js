@@ -44,45 +44,17 @@ const Photo = db.define('photo', {
       autoIncrement: true
     },
     username: DataTypes.STRING({length: 20}),
+    email: DataTypes.STRING({length: 100}),
     password: DataTypes.STRING({length: 300}),
     admin: DataTypes.BOOLEAN,
-    // location: DataTypes.INTEGER,
-    // cardInfo: DataTypes.INTEGER
   })
 
 
 
-// const Location = db.define('location', {
-//         id: {
-//           type: DataTypes.INTEGER,
-//           primaryKey: true,
-//           allowNull: false,
-//           autoIncrement: true
-//         },
-//         address: DataTypes.STRING({length: 100}),
-//         city: DataTypes.STRING({length: 65}),
-//         state: DataTypes.STRING({length: 100}),
-//         zipcode: DataTypes.INTEGER
-// })
 
+const Cart = db.define('cart', {
+        productId: DataTypes.INTEGER,
+        userId: DataTypes.INTEGER,
+})
 
-// const CardInfo = db.define('cardinfo', {
-//     id: {
-//         type: DataTypes.INTEGER,
-//         primaryKey: true,
-//         allowNull: false,
-//         autoIncrement: true
-//     },
-//     cardHolder: DataTypes.STRING({length: 100}),
-//     cardNumber: DataTypes.INTEGER,
-//     cvv: DataTypes.INTEGER,
-//     expDate: DataTypes.INTEGER,
-//     location: DataTypes.INTEGER
-// })
-
-// const Cart = db.define('cart', {
-//     productId: DataTypes.INTEGER
-
-// })
-
-module.exports = {Card, Photo}
+module.exports = {Card, Photo, User, Cart}

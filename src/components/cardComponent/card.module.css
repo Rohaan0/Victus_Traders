@@ -12,7 +12,7 @@
 .card img {
     width: 50%;
     aspect-ratio: 1/1.5;
-    object-fit: ;
+    object-fit: cover;
 }
 
 

@@ -7,7 +7,7 @@ const ProductScreen = () => {
   const [image, setImage] = useState("")
   const {id} = useParams()
 
-  const getData = () => {
+const getData = () => {
     axios
       .get(`/api/card/${id}`)
       .then((res) => {

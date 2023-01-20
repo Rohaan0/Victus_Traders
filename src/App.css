@@ -82,6 +82,8 @@ transition: all 0.3s ease-in-out;
   margin-bottom: -100px;
 }
 
+/* Product Screen */
+
 .product-image {
   width: 15%;
   object-fit: cover;
@@ -97,3 +99,89 @@ transition: all 0.3s ease-in-out;
   text-align: center;
   padding: 20px 200px 0px 200px;
 }
+
+
+/* Auth Screen */
+
+.form-container {
+  background-color: white;
+  height: fit-content;
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 25px;
+  gap: 10px;
+  border: solid black 5px;
+}
+
+.user-form {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.submit-btn {
+  height: 2rem;
+  border-radius: 5px;
+  font-size: large;
+  font-weight: 700;
+}
+
+.submit-btn:hover {
+  background-color: #656565;
+  color: white;
+  cursor: pointer;
+  transition: .4s;
+
+}
+
+.link-btn {
+  border: none;
+  background-color: transparent;
+}
+
+.link-btn:hover {
+  text-decoration: underline;
+  background-color: transparent;
+  color: black;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 600px){
+  .auth-form-container {
+    padding: 5rem;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 0.5rem;
+  }
+  }
+
+  label {
+    text-align: left;
+    padding: 0.25rem 0;
+  }
+
+  .user-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  hr {
+    color: black;
+  }
+
+
+  .white-large-font {
+    color: white;
+    font-size: xx-large;
+  }
+
+  .welcome-window {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }

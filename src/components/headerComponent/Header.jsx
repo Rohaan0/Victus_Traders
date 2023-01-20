@@ -1,19 +1,30 @@
 import React, {useState} from 'react'
 import styles from './Header.module.css'
-import Login from '../loginComponent/Login.jsx'
-import Signup from '../signupComponent/Signup.jsx'
+import { useSelector } from 'react-redux'
 import SearchBar from '../searchComponent/SearchBar.jsx'
 import {ImCart} from "react-icons/im"
 import {BsSearch} from "react-icons/bs"
 import {Link} from 'react-router-dom'
+import { useDispatch } from 'react-redux'
 
 
 
 const Header = () => {
+  const username = useSelector(state => state.username)
+  const userId = useSelector(state => state.userId)
+
   const [showSearch, setShowSearch] = useState(false)
   const [showLogin, setShowLogin] = useState(false)
   const [showSignUp, setShowSignUp] = useState(false)
   const [showMenu, setShowMenu] = useState(false)
+
+  const dispatch = useDispatch()
+
+  const logout = () => {
+    dispatch({type: 'LOGOUT'})
+  }
+
+  
 
     const handleSearch = () => {
         setShowSearch(!showSearch)
@@ -39,8 +50,8 @@ const Header = () => {
             
                     <nav className={styles.left_nav}>
                       <Link to='/'><button className={styles.nav_btn}>HOME</button></Link>
-                      <Link to='/CreateCard/:user'><button className={styles.nav_btn}>DESIGN</button></Link>
-                      <button onclick={handleSearch} className={styles.nav_btn}>SEARCH</button>
+                      <Link to={`/CreateCard/${userId}`}><button className={styles.nav_btn}>DESIGN</button></Link>
+                      <button onClick={handleSearch} className={styles.nav_btn}>SEARCH</button>
                     </nav>
                     <nav className={styles.logo}>
                              <img src={require('./assets/bluefire.jpeg')} alt="logo" className={styles.bluefire}/>
@@ -48,10 +59,10 @@ const Header = () => {
                      </nav>
                      
                     <nav className={styles.right_nav}>
-                        <button onClick={handleLogin} className={styles.nav_btn}>LOGIN</button>
-                        <button onClick={handleSignUp} className={styles.nav_btn}>SIGN-UP</button>
+                    {username !== "" ? username && <button onClick={logout} className={styles.nav_btn}>LOGOUT</button> : <><Link to="/auth/login"><button onClick={handleLogin} className={styles.nav_btn}>LOGIN</button></ Link>
+                    <Link to="/auth/signup"><button onClick={handleSignUp} className={styles.nav_btn}>SIGN UP</button></ Link> </>}
                         <button onClick={handleMenu} className={styles.nav_btn}>MENU</button>
-                        <Link to='/checkout:user'>
+                        <Link to={`checkout/${userId}`}>
                             <nav className={styles.cart_section}>
                               <ImCart size="1.2em" color="black"/>
                               <span className={styles.circle}>0</span>

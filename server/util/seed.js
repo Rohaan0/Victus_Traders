@@ -87,6 +87,17 @@ let cards = [
         artist: "Noah Bradley",
         rating: 5,
         price: 25.00
+    },
+    {
+        name: "Black Vise",
+        types: "Artifact",
+         cardText: "As Black Vise enters the battlefield, choose an opponent. At the beginning of the chosen player's upkeep, Black Vise deals X damage to that player, where X is the number of cards in their hand minus 4.",
+        pt: '',
+        expansion: "MasterPiece Series: Kaladesh Interventions",
+        rarity: "Special",
+        artist: "Igor Kieryluk",
+        rating: 5,
+        price: 48.00
     }
 
 ]
@@ -129,6 +140,11 @@ let photos = [
         url: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=405099&type=card",
         primaryPhoto: true
     },
+    {
+        cardId: 8,
+        url: "https://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=425803&type=card",
+        primaryPhoto: true
+    }
 ]
 
 
